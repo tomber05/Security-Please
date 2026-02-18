@@ -54,7 +54,7 @@ var emails = [
 	}
 ]
 
-# Nodos actualizados
+#Node
 @onready var label_subject = $MainLayout/Content/Header/MailSubject
 @onready var text_email = $MainLayout/Content/EmailView/MarginEmail/ScrollContainer/VBoxEmail/EmailBody
 @onready var label_url_tip = $MainLayout/Content/EmailView/MarginEmail/ScrollContainer/VBoxEmail/URLToolTip
@@ -62,7 +62,7 @@ var emails = [
 @onready var manual_overlay = $ManualOverlay
 @onready var feedback_popup = $FeedbackPopUp
 
-# Checkboxes actualizados
+#checkbox
 @onready var check_sender = $MainLayout/Content/ActionsFooter/HBoxActions/GridChecks/CheckSender
 @onready var check_tone = $MainLayout/Content/ActionsFooter/HBoxActions/GridChecks/CheckTone
 @onready var check_url = $MainLayout/Content/ActionsFooter/HBoxActions/GridChecks/CheckURL
@@ -79,15 +79,13 @@ func update_email_ui():
 	var data = emails[current_email_idx]
 	label_subject.text = "Subject: " + data.subject
 	text_email.text = "FROM: " + data.sender + "\n\n" + data.body
-	
-	# Limpiar checkboxes
 	check_sender.button_pressed = false
 	check_tone.button_pressed = false
 	check_url.button_pressed = false
 	check_attachment.button_pressed = false
 	check_is_safe.button_pressed = false
 
-# --- Lógica de Validación ---
+
 func _on_btn_validate_pressed():
 	var data = emails[current_email_idx]
 	var hits_detected = []
@@ -123,7 +121,7 @@ func show_feedback(text):
 	feedback_popup.popup_centered()
 	label_points.text = "Points: " + str(points)
 
-# --- Señal de confirmación del Popup ---
+
 func _on_feedback_pop_up_confirmed():
 	current_email_idx += 1
 	if current_email_idx < emails.size():
@@ -136,14 +134,13 @@ func finish_game():
 	text_email.text = "[center][b]Inbox Cleaned![/b]\n\nFinal Score: " + str(points) + "[/center]"
 	$MainLayout/Content/ActionsFooter.hide()
 
-# --- Funciones de Interfaz ---
+#UI functions
 func _on_btn_manual_pressed():
 	manual_overlay.show()
 
 func _on_btn_close_manual_pressed():
 	manual_overlay.hide()
 
-# Señales para el RichTextLabel
 func _on_email_body_meta_hover_started(meta):
 	label_url_tip.text = "🔗 REAL URL: " + str(meta)
 	label_url_tip.show()
