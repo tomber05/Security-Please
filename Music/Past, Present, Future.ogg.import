@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cv25bu51apuws"
+path="res://.godot/imported/Past, Present, Future.ogg-870be58e14452504b49949c468d47e94.oggvorbisstr"
+
+[deps]
+
+source_file="res://Music/Past, Present, Future.ogg"
+dest_files=["res://.godot/imported/Past, Present, Future.ogg-870be58e14452504b49949c468d47e94.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
