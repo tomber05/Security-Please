@@ -1,0 +1,181 @@
+[gd_scene format=3 uid="uid://cfym2lmn5s4qh"]
+
+[ext_resource type="Script" uid="uid://dgyr80rcbov23" path="res://Script/menu.gd" id="1_wwsa2"]
+[ext_resource type="Texture2D" uid="uid://cc8n4me8pyllw" path="res://border 3.png" id="2_jsrd8"]
+[ext_resource type="FontFile" uid="uid://bnadxfin8kpj1" path="res://Fonts/Fonts/Kenney Mini Square.ttf" id="3_wbdvm"]
+[ext_resource type="FontFile" uid="uid://b2yg12xikagb0" path="res://Fonts/Fonts/Kenney Rocket.ttf" id="4_q3rjx"]
+[ext_resource type="AudioStream" uid="uid://cv25bu51apuws" path="res://Music/Past, Present, Future.ogg" id="5_6swd7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ouk20"]
+bg_color = Color(0.3351593, 0.62088716, 0.74609375, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mae5d"]
+bg_color = Color(0.25872803, 0.47201395, 0.61328125, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4hy44"]
+bg_color = Color(0.22279358, 0.44854426, 0.61328125, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Menu" type="Control" unique_id=1699233790]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wwsa2")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2045686399]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.07086182, 0.20547056, 0.3359375, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=980567346]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_jsrd8")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1708417101]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -153.0
+offset_top = -64.0
+offset_right = 153.0
+offset_bottom = 266.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 17
+
+[node name="play" type="Button" parent="VBoxContainer" unique_id=1783568210]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9765625, 0.9840768, 1, 1)
+theme_override_fonts/font = ExtResource("3_wbdvm")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_ouk20")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mae5d")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4hy44")
+text = "Play"
+
+[node name="options" type="Button" parent="VBoxContainer" unique_id=9570489]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9765625, 0.9840768, 1, 1)
+theme_override_fonts/font = ExtResource("3_wbdvm")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_ouk20")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mae5d")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4hy44")
+text = "Options
+"
+
+[node name="quit" type="Button" parent="VBoxContainer" unique_id=1120313041]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9765625, 0.9840768, 1, 1)
+theme_override_fonts/font = ExtResource("3_wbdvm")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_ouk20")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mae5d")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4hy44")
+text = "Quit"
+
+[node name="Label" type="Label" parent="." unique_id=172262250]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -416.5
+offset_top = -219.0
+offset_right = 416.5
+offset_bottom = -139.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.023529412, 0.019607844, 0.019607844, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_fonts/font = ExtResource("4_q3rjx")
+theme_override_font_sizes/font_size = 60
+text = "Security Please"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=886231441]
+stream = ExtResource("5_6swd7")
+autoplay = true
+
+[node name="Options" type="Panel" parent="." unique_id=1702486725]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -236.0
+offset_top = -125.0
+offset_right = 236.0
+offset_bottom = 217.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options" unique_id=203888662]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 55.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Options"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="back" type="Button" parent="Options" unique_id=613705825]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -148.0
+offset_top = -107.0
+offset_right = 148.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.9765625, 0.9840768, 1, 1)
+theme_override_fonts/font = ExtResource("3_wbdvm")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_ouk20")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mae5d")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4hy44")
+text = "Back"
+
+[connection signal="pressed" from="VBoxContainer/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Options/back" to="." method="_on_back_pressed"]
