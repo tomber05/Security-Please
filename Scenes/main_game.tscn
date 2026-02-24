@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://djbb1lsuhllbk"]
 
 [ext_resource type="Script" uid="uid://bmnrvtcwmf6oc" path="res://Script/main_game.gd" id="1_l756w"]
+[ext_resource type="Texture2D" uid="uid://b42c7octxc7g2" path="res://Assets/vecteezy_digital-device-clipart-design-illustration_9394185.png" id="2_pu3va"]
 
 [node name="MainGame" type="Control" unique_id=551711078]
 layout_mode = 3
@@ -11,13 +12,23 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_l756w")
 
+[node name="Monitor" type="Sprite2D" parent="." unique_id=982041786]
+position = Vector2(574.6254, 437)
+scale = Vector2(0.17785244, 0.16326885)
+texture = ExtResource("2_pu3va")
+
 [node name="Background" type="ColorRect" parent="." unique_id=909850]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 46.000004
+offset_top = 44.0
+offset_right = -10.858276
+offset_bottom = -39.656494
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.9679113, 0.99230343)
 color = Color(1.4439225e-06, 0.28489935, 0.3925011, 1)
 
 [node name="MainLayout" type="HSplitContainer" parent="." unique_id=1313082259]
@@ -25,8 +36,13 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 49.0
+offset_top = 44.99997
+offset_right = 68.79541
+offset_bottom = 18.339478
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.90288806, 0.90288806)
 
 [node name="Sidebar" type="PanelContainer" parent="MainLayout" unique_id=912424475]
 custom_minimum_size = Vector2(200, 200)
