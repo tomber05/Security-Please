@@ -56,7 +56,7 @@ var emails = [
 	}
 ]
 
-# NODOS 
+# NODES 
 @onready var label_subject = $MainLayout/Content/Header/MailSubject
 @onready var text_email = $MainLayout/Content/EmailView/MarginEmail/ScrollContainer/VBoxEmail/EmailBody
 @onready var label_url_tip = $MainLayout/Content/EmailView/MarginEmail/ScrollContainer/VBoxEmail/URLToolTip
@@ -64,7 +64,7 @@ var emails = [
 @onready var manual_popupE = $ManualPopupE
 @onready var feedback_popup = $FeedbackPopUp
 
-# Sonidos
+# Sounds
 @onready var sfx_click = $SfxClick
 @onready var sfx_success = $SfxSuccess
 @onready var sfx_error = $SfxError
